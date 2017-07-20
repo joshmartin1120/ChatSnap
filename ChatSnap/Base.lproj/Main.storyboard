@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -205,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="4058.4000000000001" y="-75.112443778110944"/>
         </scene>
-        <!--View Controller-->
+        <!--Select User View Controller-->
         <scene sceneID="iR0-zb-fzF">
             <objects>
-                <viewController id="BAa-xL-j8q" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BAa-xL-j8q" customClass="SelectUserViewController" customModule="ChatSnap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qa3-xd-ttF"/>
                         <viewControllerLayoutGuide type="bottom" id="bFa-K1-REi"/>
@@ -216,8 +217,23 @@
                     <view key="view" contentMode="scaleToFill" id="MwG-JR-R6T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kht-cz-Gmn">
+                                <rect key="frame" x="16" y="64" width="343" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kht-cz-Gmn" firstAttribute="leading" secondItem="MwG-JR-R6T" secondAttribute="leadingMargin" id="088-ca-bad"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kht-cz-Gmn" secondAttribute="trailing" id="2Dp-q8-p81"/>
+                            <constraint firstItem="kht-cz-Gmn" firstAttribute="top" secondItem="qa3-xd-ttF" secondAttribute="bottom" id="Dlv-0b-Sm9"/>
+                            <constraint firstItem="bFa-K1-REi" firstAttribute="top" secondItem="kht-cz-Gmn" secondAttribute="bottom" id="bh8-hI-pO5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="kht-cz-Gmn" id="uAW-SI-CAj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3S-aL-Bsy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

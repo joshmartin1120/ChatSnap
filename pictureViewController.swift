@@ -48,14 +48,15 @@ class pictureViewController: UIViewController, UIImagePickerControllerDelegate, 
         nextButton.isEnabled = false
         
         let imagesFolder = Storage.storage().reference().child("snaps")
-        let imageData = UIImageJPEGRepresentation(pictureView.image!, 0.1)!
+        let imageData = UIImageJPEGRepresentation(pictureView.image!, 0.2)!
         
         imagesFolder.child("\(NSUUID().uuidString).jpeg").putData(imageData, metadata: nil, completion: {(metadata, error) in
             print("Attempting to upload image...")
             if error != nil {
                 print("Oh shit bois somethin wrong:\(String(describing: error))")
             }else{
-                print("succsessful! (probably)")
+                print(metadata?.downloadURL())
+                
                 self.performSegue(withIdentifier: "selectUserSegue", sender: nil)
             }
         }

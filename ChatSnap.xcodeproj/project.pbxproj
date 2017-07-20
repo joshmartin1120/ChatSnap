@@ -17,6 +17,8 @@
 		96C798B61F1152800015BF93 /* ChatSnap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96C798B41F1152800015BF93 /* ChatSnap.xcdatamodeld */; };
 		96C798B81F1152800015BF93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C798B71F1152800015BF93 /* Assets.xcassets */; };
 		96C798BB1F1152800015BF93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C798B91F1152800015BF93 /* LaunchScreen.storyboard */; };
+		96F6FFE61F210F3B00843E21 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6FFE51F210F3B00843E21 /* SelectUserViewController.swift */; };
+		96F6FFE81F211A8600843E21 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6FFE71F211A8600843E21 /* user.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		96C798B71F1152800015BF93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96C798BA1F1152800015BF93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96C798BC1F1152800015BF93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96F6FFE51F210F3B00843E21 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
+		96F6FFE71F211A8600843E21 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		A77783BF62480479FAF9C7C5 /* Pods_ChatSnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatSnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,10 +90,8 @@
 		96C798AC1F1152800015BF93 /* ChatSnap */ = {
 			isa = PBXGroup;
 			children = (
-				967BA51B1F118A3E008E5516 /* snapsViewController.swift */,
+				96F6FFE91F211AA400843E21 /* ViewControllers */,
 				96C798AD1F1152800015BF93 /* AppDelegate.swift */,
-				96C798AF1F1152800015BF93 /* SignInViewController.swift */,
-				965EB7181F12A52100B9D7AE /* pictureViewController.swift */,
 				96C798B11F1152800015BF93 /* Main.storyboard */,
 				96C798B71F1152800015BF93 /* Assets.xcassets */,
 				96C798B91F1152800015BF93 /* LaunchScreen.storyboard */,
@@ -98,6 +100,26 @@
 				960B4CA71F115D2800D7193A /* GoogleService-Info.plist */,
 			);
 			path = ChatSnap;
+			sourceTree = "<group>";
+		};
+		96F6FFE91F211AA400843E21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				967BA51B1F118A3E008E5516 /* snapsViewController.swift */,
+				96C798AF1F1152800015BF93 /* SignInViewController.swift */,
+				965EB7181F12A52100B9D7AE /* pictureViewController.swift */,
+				96F6FFE51F210F3B00843E21 /* SelectUserViewController.swift */,
+				96F6FFEA1F211ABF00843E21 /* Models */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		96F6FFEA1F211ABF00843E21 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96F6FFE71F211A8600843E21 /* user.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +250,8 @@
 				965EB7191F12A52100B9D7AE /* pictureViewController.swift in Sources */,
 				967BA51C1F118A3E008E5516 /* snapsViewController.swift in Sources */,
 				96C798B01F1152800015BF93 /* SignInViewController.swift in Sources */,
+				96F6FFE61F210F3B00843E21 /* SelectUserViewController.swift in Sources */,
+				96F6FFE81F211A8600843E21 /* user.swift in Sources */,
 				96C798B61F1152800015BF93 /* ChatSnap.xcdatamodeld in Sources */,
 				96C798AE1F1152800015BF93 /* AppDelegate.swift in Sources */,
 			);

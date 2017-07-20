@@ -30,6 +30,9 @@ class SignInViewController: UIViewController {
                         print("error creating user")
                     } else {
                         print("all good bois")
+                        
+                        Database.database().reference().child("users").child(user!.uid).child("email").setValue(user!.email!)
+                        
                         self.performSegue(withIdentifier: "signInSegue", sender: Any?.self)
                     }
                 })
